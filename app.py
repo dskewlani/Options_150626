@@ -478,7 +478,8 @@ with c_chain:
         c = TAG_COLORS.get(val, "#757575")
         return f"background-color:{c}20;color:{c};font-weight:600;border-radius:4px"
 
-    styled = df_chain.style.applymap(_color_rec, subset=["CE Rec","PE Rec"])
+    _style_fn = getattr(df_chain.style, "map", None) or getattr(df_chain.style, "applymap")
+    styled = _style_fn(_color_rec, subset=["CE Rec","PE Rec"])
     st.dataframe(styled, use_container_width=True, height=390)
 
     strikes_list = [atm + (i - num_strikes) * step for i in range(num_strikes*2+1)]
