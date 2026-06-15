@@ -18,7 +18,7 @@ load_dotenv()
 # ── Credentials (prefer .env / Streamlit secrets over hardcoded) ───────────────
 ANGEL_API_KEY     = os.getenv("ANGEL_API_KEY",     "WKZ1Ve6i")
 ANGEL_CLIENT_ID   = os.getenv("ANGEL_CLIENT_ID",   "K258077")
-ANGEL_PASSWORD    = os.getenv("ANGEL_PASSWORD",     "1811")"""
+ANGEL_PASSWORD    = os.getenv("ANGEL_PASSWORD",     "1811")
 angel_api.py — Angel One SmartAPI REST + WebSocket handler
 Full live WebSocket subscription with auto-reconnect and option chain token management.
 """
