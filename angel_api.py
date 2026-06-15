@@ -1,5 +1,5 @@
 """
-angel_api.py — Angel One SmartAPI REST + WebSocket handler
+angel_api.py - Angel One SmartAPI REST + WebSocket handler
 Full live WebSocket subscription with auto-reconnect and option chain token management.
 """
 
